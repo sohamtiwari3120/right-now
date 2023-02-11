@@ -40,6 +40,8 @@ let faceOrientationFlag = 1;
 let img_container = document.getElementById('img-container');
 let left_eye = document.getElementById('left-eye');
 let right_eye = document.getElementById('right-eye');
+let messages_container = document.getElementById('messages')
+
 
 var utterance = new SpeechSynthesisUtterance("");
 // Set utterance properties
@@ -55,6 +57,13 @@ utterance.onend = () => {
     if(faceOrientationFlag>=3) {
         ChangeImage(faceOrientationFlag - 3);
     }
+}
+
+let outputMessageTextSpeech = (text) => {
+    utterance.text = text;
+    messages_container.innerHTML = text;
+    if (utterance.text.length > 0)
+        synthesis.speak(utterance);
 }
 
 let ChangeImage = (flag_value) => {
@@ -142,23 +151,24 @@ var initRachel = () => {
     document.querySelector("#ws-id").textContent = `Your identifier is: ${client_id}`;
     var ws = new WebSocket(`ws://128.2.204.249:8080/ws/${client_id}`);
     ws.onmessage = async function (event) {
-        var messages = document.getElementById('messages')
-        var message = document.createElement('li')
+        // var message = document.createElement('li')
+        messages_container = document.getElementById('messages')
         let face_orientation_id = JSON.parse(await event.data.text());
         console.log(face_orientation_id)
         ChangeImage(face_orientation_id['flag'])
         let text_message = face_orientation_id['message'];
         if (text_message.length > 0) {
-            var content = document.createTextNode(text_message)
-            message.appendChild(content)
-            messages.appendChild(message)
+            // var content = document.createTextNode(text_message)
+            // message.appendChild(content)
+            // messages.appendChild(message)
             for (let i = 0; selectedVoice == null && i < 1; i += 1) {
                 await setFemaleVoice();
             }
             if (selectedVoice) {
-                utterance.text = face_orientation_id['message'];
-                if (utterance.text.length > 0)
-                    synthesis.speak(utterance);
+                // utterance.text = face_orientation_id['message'];
+                // if (utterance.text.length > 0)
+                //     synthesis.speak(utterance);
+                outputMessageTextSpeech(text_message)
             }
         }
 
@@ -173,13 +183,14 @@ function sendMessage(event) {
 }
 
 function speak() {
-    utterance.text = "Hello! I am Rachel."
     let heroContainer = document.getElementById("hero-container")
     heroContainer.innerHTML = `
     <div id="inner-container" class="w-100 container">
         <div id="img-container" class="mt-1 row w-100">
         </div>
-        <ul id='messages'></ul>
+        <div class="row w-100">
+            <div class="fw-normal" id='messages'></div>
+        </div>
         <div class="row w-100">
             <div class="fw-light" id="ws-id"></div>
         </div>
@@ -187,9 +198,11 @@ function speak() {
     </div>
     `
     initRachel();
+    messages_container = document.getElementById('messages')
     setTimeout(() => {
         ChangeImage(faceOrientationFlag);
-        synthesis.speak(utterance);
+        // synthesis.speak(utterance);
+        outputMessageTextSpeech("Hello! I am Rachel.")
     }, 500);
 }
 // setInterval(() => {
