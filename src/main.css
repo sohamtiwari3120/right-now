@@ -1,0 +1,18 @@
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: antiquewhite;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-container {
+    background-color: antiquewhite!important;
+}
+
+/* #img-container {
+    margin-top: 10rem;
+} */
+

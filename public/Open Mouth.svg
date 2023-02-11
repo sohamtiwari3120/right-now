@@ -1,0 +1,36 @@
+<svg width="107" height="133" viewBox="0 0 107 133" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="53.5" cy="53.4195" r="52.9796" fill="#4E3323"/>
+<circle cx="11.2917" cy="64.6014" r="10.1818" fill="#F2AE80"/>
+<rect x="1.66148" y="42.6232" width="103.681" height="69.6622" rx="4" fill="#4E3323"/>
+<circle cx="95.1605" cy="64.6014" r="10.1818" fill="#F7BF9A"/>
+<circle cx="95.1605" cy="64.6014" r="5.67409" fill="#EF937E"/>
+<rect x="15.5" y="49.5601" width="76" height="44" fill="#F7BF9A"/>
+<ellipse cx="53.5" cy="94.0601" rx="38" ry="38.5" fill="#F7BF9A"/>
+<ellipse cx="53.5" cy="50.0601" rx="38" ry="38.5" fill="#F7BF9A"/>
+<rect x="47.7578" y="64.8023" width="11.4844" height="11.44" fill="#EF937E"/>
+<ellipse cx="53.5" cy="76.2423" rx="5.74222" ry="5.81777" fill="#EF937E"/>
+<ellipse cx="53.5" cy="64.8778" rx="5.74222" ry="5.81777" fill="#EF937E"/>
+<circle cx="35.9603" cy="55.0601" r="5" fill="#001C28"  class='eyes' id='left-eye'/>
+<circle cx="69.8477" cy="55.0601" r="5" fill="#001C28"  class='eyes' id='right-eye'/>
+<mask id="mask0_3_210" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="36" y="92" width="35" height="34">
+<rect x="36.9884" y="92.2471" width="33.0232" height="33.0232" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_3_210)">
+<circle cx="53.5" cy="96.6974" r="15.53" fill="#001C28"/>
+</g>
+<mask id="mask1_3_210" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="37" y="81" width="33" height="32">
+<circle cx="53.5" cy="96.7554" r="15.53" fill="#001C28"/>
+</mask>
+<g mask="url(#mask1_3_210)">
+<circle cx="57.8307" cy="112.285" r="10.073" fill="#EE3466"/>
+</g>
+<circle cx="11.2917" cy="64.6014" r="10.1818" fill="#F7BF9A"/>
+<circle cx="11.2917" cy="64.6014" r="5.67409" fill="#EF937E"/>
+<mask id="mask2_3_210" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="9" y="5" width="89" height="90">
+<ellipse cx="53.5" cy="50.0601" rx="43.8257" ry="44.4023" fill="#F7BF9A"/>
+</mask>
+<g mask="url(#mask2_3_210)">
+<circle cx="24.89" cy="-7.06648" r="49.9577" fill="#4E3323"/>
+<circle cx="104.109" cy="-5.50251" r="44.8668" fill="#4E3323"/>
+</g>
+</svg>
