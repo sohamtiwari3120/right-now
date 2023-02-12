@@ -186,7 +186,7 @@ function speak() {
     let heroContainer = document.getElementById("hero-container")
     heroContainer.innerHTML = `
     <div id="inner-container" class="w-100 container">
-        <div id="img-container" class="mt-1 row w-100">
+        <div id="img-container" class="mt-1 mb-2 row w-100">
         </div>
         <div class="row w-100">
             <div class="fw-normal" id='messages'></div>
