@@ -153,7 +153,7 @@ var initRachel = () => {
     ws.onmessage = async function (event) {
         // var message = document.createElement('li')
         messages_container = document.getElementById('messages')
-        let face_orientation_id = JSON.parse(await event.data.text());
+        let face_orientation_id = await JSON.parse(await event.data);
         console.log(face_orientation_id)
         ChangeImage(face_orientation_id['flag'])
         let text_message = face_orientation_id['message'];
